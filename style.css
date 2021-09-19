@@ -15,15 +15,16 @@ body{
     background-repeat: repeat-x;
     overflow: hidden;   
 }
-
+section{
+    height: 100%;
+}
 .card-container{
     display: flex;
     flex-direction: column;
-    height: 58vh;
     justify-content: center;
     align-items: center;
     background: #fff;
-    width: 420px;
+    max-width: 420px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.20);
@@ -62,6 +63,9 @@ body{
 button{
     cursor: pointer;
 }
+a:hover{
+    text-decoration: none;
+}
 
 .primary{
     padding: 16px 100px;
@@ -86,6 +90,10 @@ button{
     font-weight: bold;
     margin-bottom: 60px;
 }
+.cancel:hover{
+    color: rgba(0,0,0,0.8);
+    font-weight: bold;
+}
 
 .attribution{
     position: fixed;
@@ -93,4 +101,31 @@ button{
     font-size: 14px;
     padding-bottom: 30px;
     font-weight: 200;
+}
+
+@media(max-width: 500px){
+    body{
+        background: url(images/pattern-background-mobile.svg);
+    }
+    .attribution{
+        display: none;
+    }
+    .cancel{
+        margin-bottom: 30px;
+    }
+    .primary{
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 450px){
+       .card-container{
+        max-width:300px;
+    } 
+    .primary{
+        padding: 15px 42px;
+    }
+    .header p{
+        padding: 0 20px;
+    }
 }
